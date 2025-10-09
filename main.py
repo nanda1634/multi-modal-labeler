@@ -12,9 +12,9 @@ import pandas.errors
 import glob
 
 # ========== PATHS ==========
-TEXT_PATH = "E:/New_folder/ML_A/data/text/"
-IMAGE_PATH = "E:/New_folder/ML_A/data/images/"
-ANNOTATIONS_PATH = "E:/New_folder/ML_A/annotations/"
+TEXT_PATH = "{path}" # complete Path of text folder
+IMAGE_PATH = "{path}" # path of images folder
+ANNOTATIONS_PATH = "{path}" # path of annotations folder
 os.makedirs(ANNOTATIONS_PATH, exist_ok=True)
 
 # ========== Load Models (One time) ==========
@@ -186,4 +186,5 @@ elif mode == "Image":
             df_labels.to_csv(ann_file, index=False)
             st.success(f"Saved annotations for all {len(images)} images.")
     else:
+
         st.warning("No images found in folder.")
