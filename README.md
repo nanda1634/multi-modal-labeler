@@ -31,7 +31,7 @@ A Streamlit app for automatic labelling and annotation of comments from multiple
 
 # Installation
 ```
-git clone https://github.com/nanda1634/multimodal-auto-labeling-tool.git
+git clone https://github.com/nanda1634/multi-modal-labeler.git
 cd multi-modal-labeler
 ```
 # Main dependencies:
