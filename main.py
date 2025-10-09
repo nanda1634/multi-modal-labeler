@@ -74,17 +74,10 @@ def auto_label_image(img_path):
         _, idx = torch.max(output, 1)
         return labels[idx.item()]
 
-
 # ========== Streamlit UI ==========
 st.title("🤖 Multi‑Modal Auto-Labeling Tool")
 
 mode = st.sidebar.radio("Choose Data Type", ["Text", "Image"])
-
-# ========== ASK USER FOR A CSV FOLDER ==========
-CSV_FOLDER = st.text_input(
-    "Folder containing CSV files (each with a comments column):",
-    value="E:/New_folder/ML_A/data/text/"
-)
 
 # Scan for CSV files in the given folder
 csv_files = []
