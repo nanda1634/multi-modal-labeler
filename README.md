@@ -31,6 +31,7 @@ A Streamlit app for automatic labelling and annotation of comments from multiple
 
 # Installation
 ```
+pip install streamlit torch textblob pillow googletrans
 git clone https://github.com/nanda1634/multi-modal-labeler.git
 cd multi-modal-labeler
 ```
