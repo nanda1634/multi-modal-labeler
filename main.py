@@ -10,11 +10,12 @@ from torchvision import transforms
 import asyncio
 import pandas.errors
 import glob
+from pathlib import path
 
 # ========== PATHS ==========
-TEXT_PATH = "{path}" # complete Path of text folder
-IMAGE_PATH = "{path}" # path of images folder
-ANNOTATIONS_PATH = "{path}" # path of annotations folder
+TEXT_PATH = Path.cwd() / "data" / "text"
+IMAGE_PATH = Path.cwd() / "data" / "images"
+ANNOTATIONS_PATH = Path.cwd() / "annotations"
 os.makedirs(ANNOTATIONS_PATH, exist_ok=True)
 
 # ========== Load Models (One time) ==========
@@ -181,3 +182,4 @@ elif mode == "Image":
     else:
 
         st.warning("No images found in folder.")
+
