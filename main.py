@@ -10,7 +10,7 @@ from torchvision import transforms
 import asyncio
 import pandas.errors
 import glob
-from pathlib import path
+from pathlib import Path
 
 # ========== PATHS ==========
 TEXT_PATH = Path.cwd() / "data" / "text"
@@ -182,4 +182,5 @@ elif mode == "Image":
     else:
 
         st.warning("No images found in folder.")
+
 
